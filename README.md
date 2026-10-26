@@ -2,6 +2,8 @@
 
 **Predict churn, audit the probabilities, and evaluate a limited contact budget.**
 
+**[Try the live interactive demo](https://vk24acl.github.io/churnlab-ml/)** · [Automated checks](https://github.com/vk24acl/churnlab-ml/actions)
+
 An AI-assisted portfolio implementation by **Vikas Reddy Konreddy**.
 
 ![Measured benchmark overview](reports/overview.svg)
