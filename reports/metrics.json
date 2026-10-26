@@ -1,0 +1,172 @@
+{
+  "seed": 42,
+  "data": "6000 synthetic customers, chronological cohort order; no real customer records",
+  "features": [
+    "tenure_months",
+    "weekly_sessions",
+    "support_tickets",
+    "monthly_fee",
+    "contract_monthly",
+    "usage_change"
+  ],
+  "split_sizes": {
+    "train": 3300,
+    "calibration": 900,
+    "validation": 900,
+    "test": 900
+  },
+  "candidates": {
+    "prevalence_baseline": {
+      "validation_ap": 0.16333333333333333
+    },
+    "logistic_regression": {
+      "validation_ap": 0.42955266161240924
+    },
+    "gradient_boosting": {
+      "validation_ap": 0.3920317496594788
+    }
+  },
+  "selected_model": "logistic_regression",
+  "validation_threshold": 0.253438195212704,
+  "test": {
+    "average_precision": 0.49585580040542365,
+    "roc_auc": 0.7669041938724258,
+    "brier": 0.12974478644244739,
+    "f1": 0.4925373134328358,
+    "prevalence": 0.19555555555555557,
+    "targeting_10pct": {
+      "capacity": 90,
+      "precision": 0.5888888888888889,
+      "recall": 0.30113636363636365,
+      "lift": 3.0113636363636362
+    }
+  },
+  "capacity_curve": [
+    {
+      "fraction": 0.05,
+      "capacity": 45,
+      "precision": 0.7333333333333333,
+      "recall": 0.1875,
+      "lift": 3.7499999999999996
+    },
+    {
+      "fraction": 0.1,
+      "capacity": 90,
+      "precision": 0.5888888888888889,
+      "recall": 0.30113636363636365,
+      "lift": 3.0113636363636362
+    },
+    {
+      "fraction": 0.2,
+      "capacity": 180,
+      "precision": 0.4777777777777778,
+      "recall": 0.48863636363636365,
+      "lift": 2.4431818181818183
+    },
+    {
+      "fraction": 0.3,
+      "capacity": 270,
+      "precision": 0.3888888888888889,
+      "recall": 0.5965909090909091,
+      "lift": 1.9886363636363635
+    },
+    {
+      "fraction": 0.5,
+      "capacity": 450,
+      "precision": 0.30444444444444446,
+      "recall": 0.7784090909090909,
+      "lift": 1.5568181818181819
+    },
+    {
+      "fraction": 1,
+      "capacity": 900,
+      "precision": 0.19555555555555557,
+      "recall": 1.0,
+      "lift": 1.0
+    }
+  ],
+  "calibration": [
+    {
+      "count": 361,
+      "predicted": 0.05352526916453574,
+      "observed": 0.06371191135734072
+    },
+    {
+      "count": 239,
+      "predicted": 0.14157559905119957,
+      "observed": 0.17154811715481172
+    },
+    {
+      "count": 124,
+      "predicted": 0.2454520744407818,
+      "observed": 0.21774193548387097
+    },
+    {
+      "count": 78,
+      "predicted": 0.3442634188574332,
+      "observed": 0.358974358974359
+    },
+    {
+      "count": 43,
+      "predicted": 0.4482244616902109,
+      "observed": 0.4883720930232558
+    },
+    {
+      "count": 23,
+      "predicted": 0.5415442573382687,
+      "observed": 0.5217391304347826
+    },
+    {
+      "count": 15,
+      "predicted": 0.6343718631172861,
+      "observed": 0.7333333333333333
+    },
+    {
+      "count": 11,
+      "predicted": 0.7417185176780925,
+      "observed": 0.7272727272727273
+    },
+    {
+      "count": 5,
+      "predicted": 0.8523284146603286,
+      "observed": 0.8
+    },
+    {
+      "count": 1,
+      "predicted": 0.9315830749678622,
+      "observed": 1.0
+    }
+  ],
+  "permutation_importance": [
+    {
+      "feature": "tenure_months",
+      "ap_drop_mean": 0.029226557996963352,
+      "ap_drop_std": 0.012254351686967457
+    },
+    {
+      "feature": "weekly_sessions",
+      "ap_drop_mean": 0.08734566282183247,
+      "ap_drop_std": 0.006400149381432965
+    },
+    {
+      "feature": "support_tickets",
+      "ap_drop_mean": 0.13553146123442356,
+      "ap_drop_std": 0.01038156633053294
+    },
+    {
+      "feature": "monthly_fee",
+      "ap_drop_mean": 0.01486885049210147,
+      "ap_drop_std": 0.008220730420002514
+    },
+    {
+      "feature": "contract_monthly",
+      "ap_drop_mean": 0.02222618668744557,
+      "ap_drop_std": 0.010676720684011
+    },
+    {
+      "feature": "usage_change",
+      "ap_drop_mean": 0.12180097249870951,
+      "ap_drop_std": 0.012864938516556061
+    }
+  ]
+}
